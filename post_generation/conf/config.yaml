@@ -1,0 +1,14 @@
+defaults:
+  - _self_
+  - data: hillstrom
+  - model: gpt
+
+seed: 10
+prompt_type: persona_posts
+persona_p: 0.5
+
+restore: False
+experiment_name: test
+prompt_dir: $HOME/natural/post_generation/prompts/
+save_path: $HOME/natural/data/
+date_time: ${now:%Y-%m-%d}_${now:%H-%M-%S}

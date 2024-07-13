@@ -1,0 +1,22 @@
+dataset: retail_hero
+split: train
+observational: True
+feature: 0
+feature_name: age_binary
+prop_score: 0.7
+dataset_size: 2000
+eval_size: [2000]
+synthetic: True
+seed: ${seed}
+
+sample_data_path: 
+probs_data_path: 
+val_sample_data_path: 
+val_probs_data_path:
+
+dataset_class:
+  _target_: causality_llm.datasets.retail_hero.RetailHero
+  feature_name: ${..feature_name}
+  prop_score: ${..prop_score}
+  train_size: ${..dataset_size}
+  seed: ${..seed}

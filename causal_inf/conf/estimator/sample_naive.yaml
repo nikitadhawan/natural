@@ -1,0 +1,10 @@
+estimator:
+  _target_: causality_llm.estimation.sample.Sample
+  name: sample_naive
+  dataset: 
+    _target_: ${data.dataset_class._target_}
+    feature_name: ${data.dataset_class.feature_name}
+    prop_score: ${data.dataset_class.prop_score}
+    train_size: ${data.dataset_class.train_size}
+    seed: ${data.dataset_class.seed}
+    slack: $data.dataset_class.slack}

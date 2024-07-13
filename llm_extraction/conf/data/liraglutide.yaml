@@ -1,0 +1,11 @@
+dataset: liraglutide
+split: train
+dataset_size: 10000
+seed: ${seed}
+
+posts_path: 
+samples_path: 
+
+dataset_class:
+  _target_: causality_llm.datasets.liraglutide.Liraglutide
+  seed: ${..seed}

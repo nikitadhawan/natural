@@ -1,0 +1,67 @@
+You are an expert researcher looking around reddit for posts/comments describing the effect of a treatment on weight loss or blood sugar level experienced by the author. 
+
+## Problem Setting 
+> You are interested in self-reported effects of a treatment on a user who took the treatment themselves. You want to be able to answer some or all of the following questions from the text of the post or comment:
+1. Which treatment did the user take?
+2. What change did they observe in their weight due to this treatment, and during what duration did they observe this change?
+3. What change did they observe in their blood sugar, aka HbA1c levels, due to this treatment, and during what duration did they observe this change?
+4. What are other attributes they report, e.g. age, sex, country of residence, diabetes diagnosis, other treatments they have tried, or side effects?
+
+## Your Instructions 
+I will show you a post or comment, and contextual information about it. Based on the given problem setting and contextual information, you need to judge whether it is relevant to the problem setting described above or not. Answer Yes if the post is relevant and No otherwise; nothing else.
+Here are a few examples:
+
+## Subreddit
+> This comment was found on the subreddit r/Mounjaro.
+## Title
+> This comment was in response to a post titled: r/Mounjaro Lounge
+## Date Created
+> This comment was created on November 22, 2022.
+## Comment
+> Good Morning!! Hope everyone is having a good week! Any thoughts on going to 5mg lost 8lbs on 2.5 currently on week 3 \n\nBut eligible for refill tomorrow and I can move to 5mg
+## Answer
+> Yes
+
+## Subreddit
+> This post was found on the subreddit r/Mounjaro.
+## Title
+> This post was titled: Deciding to go up in dosage.
+## Date Created
+> This post was created on November 20, 2022.
+## Post
+> I guess it would be Weightloss for me. I stalled on the 5mg and even went ahead with a 5th shot of 5mg thinking “let me give my body some time”  but I’m thinking of moving up to 7.5mg and seeing how that goes. With the 5mg I did wake up with a little more cravings like “ hmmm I wanna eat this or that” but nothing to drastic.
+## Answer
+> Yes
+
+## Subreddit
+> This comment was found on the subreddit r/SuperMorbidlyObese.
+## Title
+> This comment was in response to a post titled: Mounjaro
+## Date Created
+> This comment was created on October 21, 2022.
+## Comment
+> Mounjaro like all the GLP1 peptides was an outcome of research following early bariatric surgeries. Doctors &amp; researchers were curious about T2D &amp; metabolic syndrome diseases dialing back fast before weight loss really began. 15 years ago they spoke of surgery without the surgery, here we are. Surgery has long lasting nutritional deficiency issues, Mounjaro does not. FDA is fast tracking it for late 2023 was latest statement. Lilly is cracking down on people using their discount coupon when they don’t have T2D. My insurance covers it, Retail is $1000 or more. It’s a great drug &amp; has healing qualities beyond weight loss &amp; dropping sugars. Biggest mistake people make is the same mistake every obese person makes, they eat too many carbohydrates &amp; their fasting insulin levels are high. They either don’t lose much weight, or have to crank the dose way way up, and many get sick. My suggestion to people is to consider it, it’s a great drug, but clean up the nutrition before going on it. And those that use it to lose weight without permanently changing their nutrition &amp; lifestyle so their life isn’t all about food, those people will gain the weight back or take the risk &amp; cost of staying on it forever. Using it to lose weight while eating poorly is a mistake. I considered the surgery 6 years ago, but decided to overhaul my life instead &amp; leave my insides intact to HEAL. So glad I did.  🙏
+## Answer
+> No
+
+## Subreddit
+> This comment was found on the subreddit r/Mounjaro.
+## Title
+> This comment was in response to a post titled: r/Mounjaro Lounge
+## Date Created
+> This comment was created on November 20, 2022.
+## Comment
+> Guys did anyone have a weight stall at 5mg? I decided to stay on 5mg bc I still have appetite supression but this is my 5th week on 5mg and no Weightloss
+## Answer
+> Yes
+
+## Subreddit
+> This post was found on the subreddit r/Mounjaro.
+## Title
+> This post was titled: Anyone else having excessive thirst?
+## Date Created
+> This post was created on July 9, 2022.
+## Post
+> For context, I'm not diabetic, trying it for weight loss. I'm on day 8 and it's great but I'm thirsty all the time...it's not a problem since it makes me hydrate better but was just curious if anyone else experienced this.
+## Answer
+> No

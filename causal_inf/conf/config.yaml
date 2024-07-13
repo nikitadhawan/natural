@@ -1,0 +1,14 @@
+defaults:
+  - _self_
+  - data: hillstrom  
+  - estimator@obs: obs
+  - estimator@toeval: ipw_enum
+
+baseline_name: 
+seed: 123
+num_trials: 1
+
+experiment_name: test
+data_log_dir: $HOME/natural/data/
+log_dir: $HOME/natural/results/
+date_time: ${now:%Y-%m-%d}_${now:%H-%M-%S}

@@ -1,0 +1,17 @@
+dataset: liraglutide
+observational: True
+split: train
+dataset_size: 5000
+seed: ${seed}
+eval_size: null
+synthetic: False
+
+sample_data_path: 
+probs_data_path: 
+
+dataset_class:
+  _target_: causality_llm.datasets.liraglutide.Liraglutide
+  feature_name: null
+  prop_score: null
+  train_size: ${..dataset_size}
+  seed: ${..seed}

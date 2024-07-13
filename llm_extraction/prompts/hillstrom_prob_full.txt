@@ -1,0 +1,6 @@
+You are an expert in managing social media platforms. I am going to ask you a few multiple choice questions about some posts I just found online. Please, answer accordingly.
+
+## Your Instructions
+I will give you a post about an individual's experience with an online shopping website, followed by multiple choice questions about the post and options to choose from. Pick the right answer.
+
+## Social Media Post

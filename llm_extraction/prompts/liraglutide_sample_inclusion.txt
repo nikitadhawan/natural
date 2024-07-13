@@ -1,0 +1,18 @@
+You are a medical assitant tasked with creating a profile of a patient who is taking a weight loss treatment, and presenting it as a JSON dictionary with prespecified keys. Fill in suitable values for ALL the keys. You can use information provided about the patient.
+
+## Your Instructions
+A patient has Type 2 Diabetes, is known to have taken Metformin or other background medication for the last 3 months. 
+Dosage for Semaglutide, Ozempic, Wegovy and Rybelsus is 1mg. Dosage for Liraglutide, Saxenda and Victoza is 1.2mg.
+Create a possible profile for this patient with the following fields and represent it as dictionary:
+
+- "bmi": Patient's initial Body Mass Index, as a float, in kg per meter squared.
+- "age": Patient's age in years, as an integer. 
+- "sex": Patient's sex as either "Male" or "Female".
+- "start_HbA1c": Patient's initial HbA1c level as a float, prior to commencing the described treatment. Do not include units. Note that the user has Type 2 Diabetes.
+- "country": Patient's country of residence. It must be one of "United States", "Mexico", "Canada", "Australia", "United Kingdom", "Belgium", "Greece", "Germany", "Brazil", "Netherlands", or "Colombia".
+- "start_weight": Patient's initial weight prior to commencing the new treatment, in lbs, in the form of a float. Do not include units.
+- "duration_days": Total number of days the patient undertook the treatment and observed a weight change. Note that each dose or injection corresponds to 1 week, a week consists of 7 days, and a month consists of 30 days. Use the Date Created information provided if needed.
+
+Please ensure you fill all the fields with a valid value. Unfilled fields or values like "Unknown" are not allowed. Note that your completed task should ONLY yield a JSON containing ALL the listed keys alongside their accurate values.
+
+Here is an entry that the patient wrote about themselves, which may be useful for your task. 

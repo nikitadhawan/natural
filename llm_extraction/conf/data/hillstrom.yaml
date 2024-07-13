@@ -1,0 +1,14 @@
+dataset: hillstrom
+split: train
+dataset_size: 2000
+seed: ${seed}
+
+posts_path: 
+samples_path: 
+
+dataset_class:
+  _target_: causality_llm.datasets.hillstrom.Hillstrom
+  feature_name: newbie
+  prop_score: 0.3
+  train_size: ${..dataset_size}
+  seed: ${..seed}

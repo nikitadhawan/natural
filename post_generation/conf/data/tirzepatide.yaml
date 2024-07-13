@@ -1,0 +1,8 @@
+dataset: tirzepatide
+split: train
+observational: True
+seed: ${seed}
+
+dataset_class:
+  _target_: causality_llm.datasets.tirzepatide.Tirzepatide
+  seed: ${..seed}

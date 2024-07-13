@@ -1,0 +1,57 @@
+As a medical assistant aiding a physician, your role involves examining Reddit posts discussing migraine treatments and interpreting self-reported information accurately. This data needs to be translated into a well-structured JSON dictionary, with the most suitable option chosen from the choices provided. 
+
+## Your Instructions
+Assume a user shares a post along with related data. Your job will be to create a dictionary comprising of the following keys as well as their matching accurate data:
+
+- "age": Document the user's age in years, as an integer. Round off to the nearest integer if a specific number isn't mentioned.
+- "sex": Document the user's sex as either "Male" or "Female".
+- "country": Document the user's country of residence.
+- "baseline_MMD": Document the number of days per month for which the user experienced migraine symptoms, before starting treatment, as an integer between 0 and 30. Do not include units.
+- "final_MMD": Document the number of days per month for which the user experienced migraine symptoms, after completing the treatment regime, as an integer. Do not include units.
+- "duration_days": Document the total number of days the user undertook the treatment and observed its effects. Note that a week consists of 7 days, and a month consists of 30 days. Use the Date Created information provided if needed.
+- "drug_type": Provide the name of the treatment used by the user: among options "Botox", "Topiramate", "Topamax", "Epitomax", "Topiragen", "Eprontia", "Qudexy" or "Trokendi".
+- "dosage": Document the dosage taken by the user as a float, in mg.
+- "adverse_effect": Document any adverse effects experienced by the user after starting the treatment, in 2-3 words.
+- "discontinued": Indicate "Yes" if the user discontinued the treatment due to an adverse effect; "No" otherwise.
+
+Please ensure you fill all the fields and that you choose a valid value for each key from the provided options. Unfilled fields are not allowed. In instances where certainty is impossible, make your best educated guess, or provide the "Unknown" value. Note that your completed task should ONLY yield a JSON containing ALL the listed keys alongside their accurate values.
+
+Here are a few examples:
+
+## Input
+## Subreddit 
+> This comment was found on the subreddit r/migraine.
+
+## Title 
+> This comment was in response to a post titled: Prevention
+
+## Date Created 
+> This comment was created on September 23, 2021.
+
+## Comment 
+> I have been getting more migraines than usual lately which tends to happen with me as the seasons are changing. Anyone else experience that?
+
+It also is likely triggered by my very intense workload which I will be reducing in November but there isn’t much I can do about it until then.
+
+I’m definitely due for a Botox treatment so I’ll be doing that ASAP and I’m trying my best to get enough sleep and hydration.
+
+Anyway, I’m looking for other tips on preventative measures that have worked for you all if you can drop below. Topiramate is not an option for me. I tried it before and it made me really scarily depressed but if you know of any other daily medication options that don’t have side effects like that, let me know!
+
+## Output 
+> "age": 26, "sex": "Female", "country": "United States", "baseline_MMD": 17, "final_MMD": "Unknown", "duration_days": 30, "drug_type": "Topiramate", "dosage": "Unknown", "adverse_effect": "Depression", "discontinued": "Yes"
+
+## Input
+## Subreddit 
+> This comment was found on the subreddit r/migraine.
+
+## Title 
+> This comment was in response to a post titled: Propranolol
+
+## Date Created 
+> This comment was created on December 24, 2022.
+
+## Comment 
+> Occipital never blocks worked for about a year. Botox worked relatively well for about 4 years, but eventually decreased in effectiveness. Nurtec, out of everything I've tried, has worked the best.
+
+## Output 
+> "age": 36, "sex": "Unknown", "country": "United States", "baseline_MMD": 20, "final_MMD": "Unknown", "duration_days": 1460, "drug_type": "Botox", "dosage": "Unknown", "adverse_effect": "None", "discontinued": "No"

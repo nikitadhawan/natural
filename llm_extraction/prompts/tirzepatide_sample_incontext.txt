@@ -1,0 +1,60 @@
+As a medical assistant aiding a physician, your role involves examining Reddit posts discussing weight loss treatments and interpreting self-reported information accurately. This data needs to be translated into a well-structured JSON dictionary, with the most suitable option chosen from the choices provided. 
+
+## Your Instructions
+Assume a user shares a post along with related data. Your job will be to create a dictionary comprising of the following keys as well as their matching accurate data:
+
+- "t2dm": Indicate "Yes" if the user has been diagnosed with Type 2 Diabetes, or T2DM; "No" otherwise. Interpret an HbA1c of 7% or more as a diagnosis of Type 2 Diabetes.
+- "metformin": Indicate "Yes" if the user is taking Metformin; "No" otherwise.
+- "bmi": Document the user's initial Body Mass Index, as a float, in kg per meter squared.
+- "age": Document the user's age in years, as an integer. Round off to the nearest integer if a specific number isn't mentioned.
+- "sex": Document the user's sex as either "Male" or "Female".
+- "start_HbA1c": Document the user's initial HbA1c level as a float, prior to commencing the described treatment. Round off to the nearest float if a range is provided. Do not include units.
+- "end_HbA1c": Document the user's final HbA1c level as a float, following completion of the treatment regime. Round off to the nearest float if a range is provided. Do not include units.
+- "country": Document the user's country of residence.
+- "start_weight": Document the user's initial weight, sometimes called SW, prior to commencing the described treatment, in the form of a float. Do not include units.
+- "end_weight": Document the user's current or final weight, sometimes called CW, following completion of the treatment regime, in the form of a float. Do not include units.
+- "weight_unit": Note down the units in which weight is reported: either "kg" or "lb".
+- "weight_change": Document the net change in the user's weight in the form of a float. Use a positive sign to indicate weight gain and a negative sign to denote weight loss. Do not include units.
+- "percentage_weight_change": Document the percentage modification in the user's weight relative to their initial weight. Use a positive sign to indicate weight gain and negative sign to denote weight loss, as a float. Do not include units.
+- "duration_days": Document the total number of days the user undertook the treatment and observed a weight change. Note that each dose or injection corresponds to 1 week, a week consists of 7 days, and a month consists of 30 days. Use the Date Created information provided if needed.
+- "drug_type": Provide the name of the treatment used by the user: among options "Semaglutide", "Tirzepatide", "Ozempic", "Wegovy", "Rybelsus", "Mounjaro", or "Zepbound".
+- "dosage": Document the dosage taken by the user as a float, in mg.
+- "target_achieved": Indicate "Yes" if the user showed more than a 5% weight reduction from their starting weight; "No" otherwise.
+
+Please ensure you fill all the fields and that you choose a valid value for each key from the provided options. Unfilled fields are not allowed. In instances where certainty is impossible, make your best educated guess, or provide the "Unknown" value. Note that your completed task should ONLY yield a JSON containing ALL the listed keys alongside their accurate values.
+
+Here are a few examples:
+## Input
+## Subreddit 
+> This comment was found on the subreddit r/Mounjaro.
+## Title 
+> This comment was in response to a post titled: Week 1 - Down 4lbs
+## Date Created 
+> This comment was created on July 12, 2022.
+## Comment 
+> SW 196, CW 192 (Female age 48 5'2"") - Not diabetic. Using for weight loss.  
+I was scared of the injection a bit, but I did it in my tummy and hardly noticed it. I guess it's all the current extra cushioning ;-) So far minimal side effects, a little bit of loose stool and more gas than normal. I also bruise at the injection site. I felt a reduction in appetite, especially for carb or sugar. Very similar to when i've been on keto in the past (successfully btw, lost 20 lbs, unfortunately gained it back and more when I went off due to a very high stress time). So, as far as eating plan, I'm finding nutrient dense low carb is working very well for me. I have lots of energy and am excited at seeing the scale go down so far! 
+
+RE: pharmacy and cost. Very strange experience. I took the coupon with me but the pharmacy (SavOn) had it at a $25 copay already. I said, what if you try the coupon -- showed rejected as you need to run through insurance. So I paid the $25 and called insurance to verify (not saying I already got the meds) They said I needed prior authorization and it was not covered. So, we'll see if they stick me with a $975 bill. yikes. When I get put on the higher dose in a couple weeks, we'll see what happens! I'm thinking I'll message my dr to put in for prior authorization at some point or ?
+
+Good luck everyone!
+
+## Output
+> "t2dm": "No", "metformin": "No", "bmi": 36, "age": 48, "sex": "Female", "start_HbA1c": 6.5, "end_HbA1c": 6.5, "country": "United States", "start_weight": 196, "end_weight": 192, "weight_unit": lb, "weight_change": -4, "percentage_weight_change": -2.04, "duration_days": 7, "drug_type": "Tirzepatide", "dosage": 5, "target_achieved": "No"
+
+## Input
+## Subreddit 
+> This comment was found on the subreddit r/Semaglutide.
+## Title 
+> This comment was in response to a post titled: What dose Wegovy started working for you?
+## Date Created 
+> This comment was created on December 01, 2021.
+## Comment 
+> I felt the appetite suppression at .25mg. Start weight 191 lbs., 5’5” 57 year old female. Just took my 8th injection (4th dose at .5mg), down 14 lbs.
+
+I’ve been a dieter since my early teens. At least 10 weight loss/regain cycles. Maintenance of any weight loss has always been a struggle, getting more and more difficult as the years passed. 
+
+I’ve never lost weight this effortlessly before. It was always an extreme struggle with my appetite getting harder and harder to control. This med is a game changer.
+
+## Output
+> "t2dm": "No", "metformin": "No", "bmi": 31.8, "age": 57, "sex": "Female", "start_HbA1c": 6.0, "end_HbA1c": 6.0, "country": United States, "start_weight": 191, "end_weight": 177, "weight_unit": lb, "weight_change": -4, "percentage_weight_change": -7.3, "duration_days": 57, "drug_type": "Semaglutide", "dosage": 0.5, "target_achieved": "Yes"

@@ -1,0 +1,73 @@
+As a medical assistant aiding a physician, your role involves examining Reddit posts discussing weight loss treatments and interpreting self-reported information accurately. This data needs to be translated into a well-structured JSON dictionary, with the most suitable option chosen from the choices provided. 
+
+## Your Instructions
+Assume a user shares a post along with related data. Your job will be to create a dictionary comprising of the following keys as well as their matching accurate data:
+
+- "t2dm": Indicate "Yes" if the user has been diagnosed with Type 2 Diabetes, or T2DM; "No" otherwise. Interpret an HbA1c of 7% or more as a diagnosis of Type 2 Diabetes.
+- "metformin": Indicate "Yes" if the user is taking Metformin; "No" otherwise.
+- "bmi": Document the user's initial Body Mass Index, as a float, in kg per meter squared.
+- "age": Document the user's age in years, as an integer. Round off to the nearest integer if a specific number isn't mentioned.
+- "sex": Document the user's sex as either "Male" or "Female".
+- "start_HbA1c": Document the user's initial HbA1c level as a float, prior to commencing the described treatment. Round off to the nearest float if a range is provided. Do not include units.
+- "end_HbA1c": Document the user's final HbA1c level as a float, following completion of the treatment regime. Round off to the nearest float if a range is provided. Do not include units.
+- "country": Document the user's country of residence.
+- "start_weight": Document the user's initial weight, sometimes called SW, prior to commencing the described treatment, in the form of a float. Do not include units.
+- "end_weight": Document the user's current or final weight, sometimes called CW, following completion of the treatment regime, in the form of a float. Do not include units.
+- "weight_unit": Note down the units in which weight is reported: either "kg" or "lb".
+- "weight_change": Document the net change in the user's weight in the form of a float. Use a positive sign to indicate weight gain and a negative sign to denote weight loss. Do not include units.
+- "percentage_weight_change": Document the percentage modification in the user's weight relative to their initial weight. Use a positive sign to indicate weight gain and negative sign to denote weight loss, as a float. Do not include units.
+- "duration_days": Document the total number of days the user undertook the treatment and observed a weight change. Note that each dose or injection corresponds to 1 week, a week consists of 7 days, and a month consists of 30 days. Use the Date Created information provided if needed.
+- "drug_type": Provide the name of the treatment used by the user: among options "Semaglutide", "Liraglutide", "Ozempic", "Wegovy", "Rybelsus", "Saxenda", or "Victoza".
+- "dosage": Document the dosage taken by the user as a float, in mg.
+- "target_achieved": Indicate "Yes" if the user showed more than a 5% weight reduction from their starting weight; "No" otherwise.
+
+Please ensure you fill all the fields and that you choose a valid value for each key from the provided options. Unfilled fields are not allowed. In instances where certainty is impossible, make your best educated guess, or provide the "Unknown" value. Note that your completed task should ONLY yield a JSON containing ALL the listed keys alongside their accurate values.
+
+Here are a few examples:
+## Input
+## Subreddit 
+> This comment was found on the subreddit r/liraglutide.
+
+## Title 
+> This comment was in response to a post titled: Saxenda update *3 weeks in*
+
+## Date Created 
+> This comment was created on December 31, 2022.
+
+## Comment 
+> So I’ve not been on Sax for almost 3 weeks. I just checked my progress chart and I’m only a pound down 😳 my weight has fluctuated by 4lb 4oz during that time. 
+My highest weight being higher than what I started Saxenda on at 12 stone 6.5 lbs (174.5 lbs) and down to 12 stone 2.1 lbs (170.1 lbs). Tbh though I’m not that disappointed because I still have made a lot of changes and I know if I didn’t let the “mental hunter” get to me I would’ve made a lot more progress so at least I know what I need to do moving forward. I also smoke weed and struggle with the munchies even on Sax, despite eating less during my muchie episodes, it’s still enough to impact my weight. So I either have to develop some sort of super self-control when I smoke or just quit smoking for a while so I can make weight loss progress. I also think I’m gonna be someone who needs a mid/to high dose to see decent progress. Like I’m on day 4 of 1.8mg and this is probably the worst I’ve felt so far on it. Had a super long nap today (around 4 hours) despite having a decent nights sleep. My side effects usually start when it’s time to take another shot? Don’t know if anyone else experiences that? I started feeling sick, dry heaving, headache but it’s starting to subside now. I’ve had my shot for the evening, I might continue on this dose for another week before I start on the final dose (3mg). We’ll see how this dose goes. I guess the goal is to be on the lowest dose as possible for as short as possible ideally. I’ve only eaten 650 cals today and that’s really enough for me. I have no desire to eat any more. 
+
+Side effects update: 
+- either mildly constipated or quite loose stool 
+- random waves of anger/frustration and sadness 
+- nausea and dry heaving 
+- adverse to certain smells 
+- adverse to certain foods/drinks I used to like e.g. coffee … I really don’t like coffee now which is great because I was trying to quit 😎
+
+That’s about it from me. My goal was to be 12 stone (168 lbs) by the 1st of Jan 23 and I’d 650 cals is all I have consumed today then I think I should be more or less there. 
+I weighed in at 12 stone 3.9 lbs (171.9 lbs) today, after a mini muchie binge yesterday. 
+I was 12 stone 2.1 lbs (170.1 lbs) the day before. I need to remember to drink more water as well. 
+
+That’s all from me for now folks ✌🏻
+Hope everyone has a good new year 🥳🎇
+
+## Output 
+> "t2dm": "Unknown", "metformin": "Unknown", "bmi": "Unknown", "age": 28, "sex": "Male", "start_HbA1c": 6.2, "end_HbA1c": 6.2, "country": "United States", "start_weight": 174.5, "end_weight": 171.9, "weight_unit": lb, "weight_change": -2.6, "percentage_weight_change": -1.49, "duration_days": 21, "drug_type": "Saxenda", "dosage": 1.2, "target_achieved": "No"
+
+## Input
+## Subreddit 
+> This comment was found on the subreddit r/Semaglutide.
+## Title 
+> This comment was in response to a post titled: What dose Wegovy started working for you?
+## Date Created 
+> This comment was created on December 01, 2021.
+## Comment 
+> I felt the appetite suppression at .25mg. Start weight 191 lbs., 5’5” 57 year old female. Just took my 8th injection (4th dose at .5mg), down 14 lbs.
+
+I’ve been a dieter since my early teens. At least 10 weight loss/regain cycles. Maintenance of any weight loss has always been a struggle, getting more and more difficult as the years passed. 
+
+I’ve never lost weight this effortlessly before. It was always an extreme struggle with my appetite getting harder and harder to control. This med is a game changer.
+
+## Output
+> "t2dm": "Unknown", "metformin": "Unknown", "bmi": 31.8, "age": 57, "sex": "Female", "start_HbA1c": 6.0, "end_HbA1c": 6.0, "country": United States, "start_weight": 191, "end_weight": 177, "weight_unit": lb, "weight_change": -4, "percentage_weight_change": -7.3, "duration_days": 57, "drug_type": "Semaglutide", "dosage": 0.5, "target_achieved": "Yes"

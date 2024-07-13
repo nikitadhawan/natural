@@ -1,0 +1,77 @@
+You are an expert researcher looking around reddit for posts/comments describing the effect and tolerability of a of a treatment on migraines experienced by the author. 
+
+## Problem Setting 
+> You are interested in self-reported effects of a treatment on a user who took the treatment themselves. You want to be able to answer some or all of the following questions from the text of the post or comment:
+1. Which treatment did the user take?
+2. Did the user experience adverse effects due to this treatment, and during what duration did they observe these effects?
+3. Did the user discontinue the treatment due to the adverse effects, and if so, after what duration did they do so?
+4. What are other attributes they report, e.g. age, sex, country of residence, frequency of migraines, pain intensity, or other side effects?
+
+## Your Instructions 
+I will show you a post or comment, and contextual information about it. Based on the given problem setting and contextual information, you need to judge whether it is relevant to the problem setting described above or not. Answer Yes if the post is relevant and No otherwise; nothing else.
+Here are a few examples:
+
+## Subreddit
+> This comment was found on the subreddit r/migraine.
+## Title
+> This comment was in response to a post titled: Migraine
+## Date Created
+> This comment was created on December 07, 2022.
+## Comment
+> My nausea is different. Comes and goes and doesn't matter if I'm moving or standing. And at night, I have to sleep with my head and chest up. I got it from emgality. I took Aimovig before but I stopped due to the intense anxiety and panic attacks.
+## Answer
+> Yes
+
+## Subreddit
+> This comment was found on the subreddit r/migraine.
+## Title
+> This comment was in response to a post titled: Migraine
+## Date Created
+> This comment was created on November 12, 2022.
+## Comment
+> I get Botox every three months and it has been life changing. I was extremely apprehensive about it but my neurologist talked me into. It would be worth looking into. Aimovig was also mentioned by someone and is a monthly injection that I’ve heard good things about.
+## Answer
+> No
+
+## Subreddit
+> This comment was found on the subreddit r/migraine.
+## Title
+> This comment was in response to a post titled: Migraine
+## Date Created
+> This comment was created on December 28, 2022.
+## Comment
+> I love Topamax. Agree with the poster who said to give it a month or so as you will have side effects, likely. The side effects tend to outweigh the migraines. I have not lost weight on it, though. 
+
+You may want to check out The Migraine Miracle or other similar books for migraine control that could help with weight loss. They are definitely Keto based - gluten free, sugar free. I am very much struggling with the sugar free. 
+
+I, too, am hoping to get back to the gym. There seems to be opposing advice on cardio. My trainer told me to avoid cardio that involves jumping, too much head movement, and such. So I really just focus on resistance training.  I would like to just started taking a walk at lunch. 
+
+It is so hard! We can do it, though! Talk to your doctor about your meds and stay strong!
+## Answer
+> Yes
+
+## Subreddit
+> This comment was found on the subreddit r/migraine.
+## Title
+> This comment was in response to a post titled: migraine
+## Date Created
+> This comment was created on December 05, 2022.
+## Comment
+> You're definitely not out of options! Don't give up hope. There are tons more preventive treatments out there to try other than amitriptyline and propranolol. Topiramate, Depakote, gabapentin, nurtec, qulipta, aimovig, ajovy, emgality, vyepti, botox just to name a few. 
+
+If you're taking paracetamol and codeine daily you probably do have medication overuse headaches, but a good doctor should help you find a solution for that rather than just saying that's the problem. Medication overuse can cause people to have more headaches, but those people still have headache issues that caused them to resort to the meds in the first place, and that deserves treatment. 
+
+It sounds like you may need to find a different doctor who will take you more seriously and help you try different treatments. If you're only seeing a GP right now, I highly recommend trying to see a headache specialist and/or neurologist instead.
+## Answer
+> No
+
+## Subreddit
+> This comment was found on the subreddit r/migraine.
+## Title
+> This comment was in response to a post titled: Migraine
+## Date Created
+> This comment was created on November 06, 2022.
+## Comment
+> I take Qulipta every day. It has absolutely changed my life. I also took Topamax every day for about 15-20 years before it stopped working for me. There are quite a few options for prophylactic meds, is that what you are looking for, or one that you only use as an acute or rescue med?
+## Answer
+> Yes

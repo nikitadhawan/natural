@@ -1,0 +1,53 @@
+As a medical assistant aiding a physician, your role involves examining Reddit posts discussing migraine treatments and interpreting self-reported information accurately. This data needs to be translated into a well-structured JSON dictionary, with the most suitable option chosen from the choices provided. 
+
+## Your Instructions
+Assume a user shares a post along with related data. Your job will be to create a dictionary comprising of the following keys as well as their matching accurate data:
+
+- "age": Document the user's age in years, as an integer. Round off to the nearest integer if a specific number isn't mentioned.
+- "sex": Document the user's sex as either "Male" or "Female".
+- "country": Document the user's country of residence.
+- "pregnant": Indicate "Yes" if the user is pregnant; "No" otherwise.
+- "baseline_MMD": Document the number of days per month for which the user experienced migraine symptoms, before starting treatment, as an integer between 0 and 30. Do not include units.
+- "final_MMD": Document the number of days per month for which the user experienced migraine symptoms, after completing the treatment regime, as an integer. Do not include units.
+- "duration_days": Document the total number of days the user undertook the treatment and observed its effects. Note that a week consists of 7 days, and a month consists of 30 days. Use the Date Created information provided if needed.
+- "drug_type": Provide the name of the treatment used by the user: among options "Erenumab", "Topiramate", "Aimovig", "Topamax", "Epitomax", "Topiragen", "Eprontia", "Qudexy" or "Trokendi".
+- "dosage": Document the dosage taken by the user as a float, in mg.
+- "adverse_effect": Document any adverse effects experienced by the user after starting the treatment, in 2-3 words.
+- "discontinued": Indicate "Yes" if the user discontinued the treatment due to an adverse effect; "No" otherwise.
+
+Please ensure you fill all the fields and that you choose a valid value for each key from the provided options. Unfilled fields are not allowed. In instances where certainty is impossible, make your best educated guess, or provide the "Unknown" value. Note that your completed task should ONLY yield a JSON containing ALL the listed keys alongside their accurate values.
+
+Here are a few examples:
+## Input
+## Subreddit 
+> This comment was found on the subreddit r/migraine.
+## Title 
+> This comment was in response to a post titled: Migraine
+## Date Created 
+> This comment was created on November 28, 2022.
+## Comment 
+> Side effects vary by person. For me, what you are contemplating, you'll be fine. I had no such issues with "blanking out", whatever that means. Certainly I do a my share of driving, including long trips of the type you are contemplating.
+
+Whatever your type of side effects, you'll know how your body reacts in the month before your trip after you start increasing your dose. Listen to your body. Topiramate takes a lot of (maybe deserved) shit, especially by people for who it didn't work on this forum, but for the majority of people, they get, at most, the mild version of the side effects of the drug.
+
+For me, it's been a wonder drug. I take 100mg (2x50mg, morning/night, male, 200lbs). Halved my migraines and whatever minor side effects I had have dissipated with time (on it for two years). I think the only side effect that's stayed is I tend to hiccup badly with soda, so taste of carbonated drinks is still off and flat (still drink it though... just... carefully). For other people, the drug doesn't help. For some, they can't stand the side effects. For a few, it's a nightmare.
+
+## Output 
+> "age": 40, "sex": "Male", "country": "Unknown", "pregnant": "No", "baseline_MMD": "Unknown", "final_MMD": "Unknown", "duration_days": 730, "drug_type": "Topiramate", "dosage": 100, "adverse_effect": "Hiccups", "discontinued": "No"
+
+## Input
+## Subreddit 
+> This comment was found on the subreddit r/migraine.
+## Title 
+> This comment was in response to a post titled: Migraine
+## Date Created 
+> This comment was created on November 20, 2022.
+## Comment 
+> Background I'm 32 male 
+Have had a constant headache for 7 years. I believe the Dr diagnosis is intractable migraine .
+I have tried a myriad of medication. Imatrex,Topamax,gabapen, etc.. and also was on amovig for a year and tried botox for a year. So far, nothing has really changed my migraine. In 2018-2019 when I was taking amovig I started having very noticeable to me memory issues and that is one of the reasons why I decided to stop the amovig plus i wasn't noticing anything different in my migraines.
+Now fast forward I haven't been on any medications for a couple years now but my memory and cognitive ability is terrible I have trouble with recall and remembering tasks that I have just done my vocabulary is noticeably smaller and I have a hard time holding a conversion
+Has anyone had improvement with treatment?
+
+## Output 
+> "age": 32, "sex": "Male", "country": "Unknown", "pregnant": "No", "baseline_MMD": "Unknown", "final_MMD": "Unknown", "duration_days": 365, "drug_type": "Aimovig", "dosage": "Unknown", "adverse_effect": "Memory issues", "discontinued": "Yes"

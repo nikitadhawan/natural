@@ -1,0 +1,4 @@
+llm_name: llama-70b-chat
+temperature: 0.7
+sample_size: 1
+batch_size: 1

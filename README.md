@@ -2,7 +2,7 @@
 
 </div>
 
-This repository is an implementation of NATURAL in [End-To-End Causal Effect Estimation from Unstructured Natural Language Data](https://arxiv.org/abs/2407.07018).
+This repository is an implementation of the original NATURAL experiments in [End-To-End Causal Effect Estimation from Unstructured Natural Language Data](https://arxiv.org/abs/2407.07018). See [naturalv2](https://github.com/nikitadhawan/naturalv2) for an improved version that is faster, configurable, and extensible.
 
 ______________________________________________________________________
 
